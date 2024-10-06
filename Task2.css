@@ -54,12 +54,12 @@ body {
 }
 
 .kodemonk-cards {
-    height: 1730px;
-    width: 87%;
-    margin-left: 5rem;
-    justify-content: space-between;
     display: flex;
+    width: 80%;
     flex-wrap: wrap;
+    margin: auto;
+    gap: 2rem;
+    justify-content: center;
 }
 
 .cards {
@@ -101,15 +101,11 @@ body {
 }
 
 .bottom-menu {
-    position: relative;
-    top: 20px;
     background-color: black;
     color: aliceblue;
-    padding: 20px 0 0 40px;
+    padding: 0 10%;
     height: 60px;
-    width: 100%;
-}
-
-.bottom-name{
-    margin-left: 100px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
 }
