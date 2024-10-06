@@ -4,13 +4,20 @@
     box-sizing: border-box;
 }
 
+body {
+    --kodmonk-top-menu-size: 45px;
+}
+
 .header {
     background-color: black;
     height: 65vh;
 }
 
 .kodemonk-menu {
-    padding: 20px 0 0 64px;
+    padding: 0 64px;
+    height: var(--kodmonk-top-menu-size);
+    display: flex;
+    align-items: center;
 }
 
 .menu:hover {
@@ -20,7 +27,7 @@
 .menu {
     text-align: center;
     font-size: 1.2rem;
-    margin: 2rem 0 0 2rem;
+    padding-inline: 20px;
     text-decoration: none;
     color: gray;
 
@@ -28,9 +35,11 @@
 
 .head {
     color: aliceblue;
-    position: relative;
-    left: 575px;
-    top: 150px;
+    display: flex;
+    height: calc(100% - var(--kodmonk-top-menu-size));
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .title {
