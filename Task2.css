@@ -4,13 +4,20 @@
     box-sizing: border-box;
 }
 
+body {
+    --kodmonk-top-menu-size: 45px;
+}
+
 .header {
     background-color: black;
     height: 65vh;
 }
 
 .kodemonk-menu {
-    padding: 20px 0 0 64px;
+    padding: 0 64px;
+    height: var(--kodmonk-top-menu-size);
+    display: flex;
+    align-items: center;
 }
 
 .menu:hover {
@@ -20,7 +27,7 @@
 .menu {
     text-align: center;
     font-size: 1.2rem;
-    margin: 2rem 0 0 2rem;
+    padding-inline: 20px;
     text-decoration: none;
     color: gray;
 
@@ -28,9 +35,11 @@
 
 .head {
     color: aliceblue;
-    position: relative;
-    left: 575px;
-    top: 150px;
+    display: flex;
+    height: calc(100% - var(--kodmonk-top-menu-size));
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .title {
@@ -45,12 +54,13 @@
 }
 
 .kodemonk-cards {
-    height: 1730px;
-    width: 87%;
-    margin-left: 5rem;
-    justify-content: space-between;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(4, auto);
+    width: 100%;
+    margin: auto;
+    gap: 2rem;
+    justify-content: center;
 }
 
 .cards {
@@ -81,6 +91,11 @@
     color: black;
 }
 
+.card-imd-btm-paragraph6 {
+    margin: 10px 0 0 20px;
+    color: rgb(66, 66, 66);
+}
+
 .card-imd-btm-paragraph {
     margin: 30px 0 0 20px;
     color: rgb(66, 66, 66);
@@ -92,15 +107,33 @@
 }
 
 .bottom-menu {
-    position: relative;
-    top: 20px;
     background-color: black;
     color: aliceblue;
-    padding: 20px 0 0 40px;
+    padding: 0 10%;
     height: 60px;
-    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
 }
 
-.bottom-name{
-    margin-left: 100px;
+
+@media screen and (max-width:1200px) {
+    .kodemonk-cards {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(6, auto);
+
+    }
+
 }
+
+@media screen and (max-width:800px) {
+    .kodemonk-cards {
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        grid-template-rows: repeat(12, auto);
+
+    }
+
+}
+
